@@ -1,2 +1,42 @@
 ### CREATE
-POST http://localhost:3333/tickets
+POST http://localhost:3333/tickets 
+Content-Type: application/json
+
+{
+    "equipment": "Computador",
+    "description": "Computador não liga.",
+    "user_name": "Matheus Torres"
+}
+
+###
+
+GET http://localhost:3333/tickets 
+Content-Type: application/json
+
+###
+
+GET http://localhost:3333/tickets?status=open 
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3333/tickets/bef24584-5c46-437e-909b-1b2385ef7a2a
+Content-Type: application/json
+
+{
+    "equipment": "Notebook",
+    "description": "Notebook não liga.",
+    "user_name": "Matheus Torres"
+}
+
+###
+PATCH http://localhost:3333/tickets/bef24584-5c46-437e-909b-1b2385ef7a2a/close 
+Content-Type: application/json
+
+{
+    "solution": "Equipamento trocado."
+}
+
+### 
+DELETE http://localhost:3333/tickets/e9695fa9-63e9-41aa-94d3-16c630eb1460 
+Content-Type: application/json
