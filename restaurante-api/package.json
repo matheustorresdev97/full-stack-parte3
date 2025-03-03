@@ -1,0 +1,22 @@
+{
+  "name": "restaurante-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "API para gerenciar pedidos das mesas de um restaurante",
+  "dependencies": {
+    "express": "^4.21.2",
+    "restaurante-api": "file:"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.8",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
