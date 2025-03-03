@@ -8,3 +8,12 @@ Content-Type: application/json
     "name": "Batata Frita",
     "price": 55.0
 }
+
+###
+PUT http://localhost:3333/products/1
+Content-Type: application/json
+
+{
+    "name": "Batata Frita",
+    "price": 55.0
+}
