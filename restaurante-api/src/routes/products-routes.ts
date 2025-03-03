@@ -1,12 +1,12 @@
 import { Router } from "express"
-import { ProductsController } from "@/controllers/products-controller"
+import { ProductsControllers } from "@/controllers/products-controllers"
 
 const productsRoutes = Router();
-const productsController = new ProductsController()
+const productsControllers = new ProductsControllers()
 
-productsRoutes.get("/", productsController.index)
-productsRoutes.post("/", productsController.create)
-productsRoutes.put("/:id", productsController.update)
-productsRoutes.delete("/:id", productsController.remove)
+productsRoutes.get("/", productsControllers.index)
+productsRoutes.post("/", productsControllers.create)
+productsRoutes.put("/:id", productsControllers.update)
+productsRoutes.delete("/:id", productsControllers.remove)
 
 export { productsRoutes }

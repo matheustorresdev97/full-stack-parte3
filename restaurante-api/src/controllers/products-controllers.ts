@@ -3,7 +3,7 @@ import { knex } from "@/database/knex"
 import z from "zod";
 import { AppError } from "@/utils/AppError";
 
-class ProductsController {
+class ProductsControllers {
     index = async (request: Request, response: Response, next: NextFunction) => {
         try {
             const { name } = request.query
@@ -93,4 +93,4 @@ class ProductsController {
     }
 }
 
-export { ProductsController }
+export { ProductsControllers }
