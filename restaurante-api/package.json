@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "knex": "tsx node_modules/knex/bin/cli.js"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +12,9 @@
   "description": "API para gerenciar pedidos das mesas de um restaurante",
   "dependencies": {
     "express": "^4.21.2",
-    "restaurante-api": "file:"
+    "knex": "^3.1.0",
+    "restaurante-api": "file:",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
