@@ -13,7 +13,7 @@ class ProductsController {
                 .whereLike("name", `%${name ?? ""}%`)
                 .orderBy("name")
 
-            response.json(products);
+            response.status(200).json({ products })
         } catch (error) {
             next(error);
         }
