@@ -7,6 +7,8 @@ import { TablesSessionsControllers } from "@/controllers/tables-sessions-control
 const tablesSessionsRoutes = Router();
 const tablesSessionsControllers = new TablesSessionsControllers();
 
+tablesSessionsRoutes.get("/", tablesSessionsControllers.index)
 tablesSessionsRoutes.post("/", tablesSessionsControllers.create)
+tablesSessionsRoutes.patch("/:id", tablesSessionsControllers.update)
 
 export { tablesSessionsRoutes };
