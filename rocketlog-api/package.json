@@ -1,0 +1,22 @@
+{
+  "name": "rocketlog-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "Matheus Torres",
+  "license": "ISC",
+  "description": "Api de entregas de encomendas",
+  "dependencies": {
+    "express": "^4.21.2",
+    "rocketlog-api": "file:"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
