@@ -22,6 +22,10 @@ class DeliveryLogsController {
             throw new AppError("Delivery not found", 404)
         }
 
+        if (delivery.status === "delivered") {
+            throw new AppError("this order has already been delivered")
+          }
+
         if (delivery.status === "processing") {
             throw new AppError("change status to shipped")
         }
@@ -47,10 +51,14 @@ class DeliveryLogsController {
             where: {
                 id: delivery_id,
             },
+            include: {
+                logs: true,
+                user: { select: { name: true, email: true } },
+            },
         })
 
         if (
-            request.user?.role === "costumer" &&
+            request.user?.role === "customer" &&
             request.user.id !== delivery?.userId
         ) {
             throw new AppError("the user can only view their deliveries", 401)
